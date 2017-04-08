@@ -1,4 +1,4 @@
-﻿#A Knowledge-based Items' Hierarchical Algorithm (AKIHA) Ver0.7.1 説明書
+﻿# A Knowledge-based Items' Hierarchical Algorithm (AKIHA) Ver0.7.1 説明書
 
 ## 1． 概要
 本プログラムは、好きなアイドルを2択で選んでいくと、自分自身の好きなアイドルの順位およびおすすめアイドルを表示してくれるプログラムである。
@@ -36,18 +36,21 @@ main.pywをダブルクリックするとGUI画面が開く。
 私は神谷奈緒Pです。
 
 ## 6. 動作環境
-Windows 7を推奨(Windows 10でも動くことは確認済)
-Python 2.7
-以下のモジュール(pipでインストール可能、あるいはすでに配置済み)
-random
-time
-sys
-Dialog
-Tkinter
-TkMessageBox
-PIL
-numpy
 
-##リリースノート
+- Windows 7を推奨(Windows 10でも動くことは確認済)
+- Python 2.7
+- 以下のモジュール(pipでインストール可能、あるいはすでに配置済み)
+
++ random
++ time
++ sys
++ Dialog
++ Tkinter
++ TkMessageBox
++ PIL
++ numpy
+
+
+## リリースノート
 2016.8.12 Ver 0.7.0 バグフィックス実施、リリース版
 2017.3.5 Windows10でも動作することを確認
