@@ -8,6 +8,9 @@ import numpy as np
 import AttributeClass
 
 class RegressionClass():
+	"""
+	回帰分析を行うためのクラス。
+	"""
 	def __init__(self):
 		self.num = 0
 		self.BArray = []
@@ -41,6 +44,9 @@ class RegressionClass():
 		self.paArray.append(Pa)
 		
 	def normalizeAll(self):
+		"""
+		それぞれの配列を正規化する。
+		"""
 		self.BArray = normalize(self.BArray)
 		self.WArray = normalize(self.WArray)
 		self.HArray = normalize(self.HArray)
@@ -52,10 +58,16 @@ class RegressionClass():
 		self.paArray = normalize(self.paArray)
 		
 	def returnAll(self):
+		"""
+		2次元配列として返却
+		"""
 		return np.array([self.BArray,self.WArray,self.HArray,self.ageArray,self.heightArray,self.weightArray,
 						self.cuArray,self.coArray,self.paArray])
 	
 	def normalizeCoef(self):
+		"""
+		正規化するための、平均と標準偏差を返却。
+		"""
 		self.nc =  np.array([[np.mean(self.BArray),np.std(self.BArray)],
 							[np.mean(self.WArray),np.std(self.WArray)],
 							[np.mean(self.HArray),np.std(self.HArray)],
@@ -68,6 +80,9 @@ class RegressionClass():
 							)
 	
 	def register(self,preferredArray):
+		"""
+		アイドルのマージソート結果の配列を、インスタンス変数のそれぞれの属性ごとの配列に変換する。
+		"""
 		self.num = 0
 		for p in preferredArray:
 			self.appendB(p.getB())
@@ -82,6 +97,9 @@ class RegressionClass():
 			self.num = self.num + 1
 	
 	def regression(self):
+		"""
+		回帰分析を実行する。
+		"""
 		pref = normalize([self.num - i for i in range(0,self.num)])
 		self.normalizeAll()
 		expl = self.returnAll()
@@ -95,6 +113,9 @@ class RegressionClass():
 		return self.coef
 	
 	def returnPredict(self,arrayToPredict):
+		"""
+		予測結果の返却。
+		"""
 		ans = []
 		pred = []
 		for a in arrayToPredict:
@@ -115,8 +136,10 @@ class RegressionClass():
 		return str
 
 
-	
 def normalize(array):
+	"""
+	配列を正規化する。
+	"""
 	sumArray = sum(array)/float(len(array))
 	ans = [array[i] - float(sumArray) for i in range(0,len(array))] # mean = 0
 	stdArray = np.std(ans)
@@ -124,11 +147,14 @@ def normalize(array):
 	return ans
 
 def stat(obj, exp):
+	"""
+	重回帰分析の実行
+	"""
 	n = exp.shape[1]
 	exp = np.vstack([np.ones(n), exp])
 	coef = np.linalg.lstsq(exp.T, obj)[0]
 	return coef
-	
+
 def returnRank(array):
 	ct = 0
 	print "Ranking:"
@@ -137,6 +163,9 @@ def returnRank(array):
 		print "No.%d:\t\t%s" % (ct,item)
 
 def seihekiChecker(regAns):
+	"""
+	どの属性にどの程度重みがついているかを表示する。
+	"""
 	returnText = "Coefficients:\n   Bust: %0.5f\n   Waist: %0.5f\n   Hip: %0.5f\n   Age: %0.5f\n   Height: %0.5f\n   Weight: %0.5f\n   Cute: %0.5f\n   Cool: %0.5f\n   Passion: %0.5f" % (regAns[1],regAns[2],regAns[3],regAns[4],regAns[5],regAns[6],regAns[7],regAns[8],regAns[9])
 	absAns = abs(regAns)[1:10]
 	maxArg = np.argmax(absAns)

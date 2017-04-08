@@ -1,6 +1,8 @@
 #! C:/Python27
 # -*- coding:utf-8 -*-
 
+#py2exeを使う場合は以下のsetup.pyを実行すること。
+
 from distutils.core import setup
 import py2exe
 

@@ -5,17 +5,20 @@
 ##Copyright (c) 2017 AyatsujiP All Rights Reserved.
 
 import AttributeClass as ac 
-	
+
 def printChoice(leftItem,rightItem):
 	#deprecated(for CLI)
 	print "\n\n\nWhich is more preferred, Left or Right?"
 	print "===%s ===              ===%s ===" % (leftItem,rightItem)
 	print "If left, press 'L'; If right, press 'R'"
-	
-	
-	
+
+
+
 
 def readTable(FILENAME):
+	"""
+	Mobamas.txt, Suggest.txtを読み込んでコンテナに格納する
+	"""
 	f = open(FILENAME,"r")
 	cont = ac.IdolsContainer()
 	next(f)
@@ -31,6 +34,10 @@ def readTable(FILENAME):
 	return cont
 	
 def mergeWithoutRecWithAns(array,ansArray):
+	"""
+	マージソートを行うための関数。マージソートの、1回ごとの比較をユーザに行わせるために、それまでのマージソートの結果とともに比較すべき対象を返却する。
+	リファクタリングの際は手を入れないほうが無難。
+	"""
 	arraycp = [i for i in array]
 		
 	ansLen = len(ansArray)

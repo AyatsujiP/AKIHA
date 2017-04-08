@@ -8,6 +8,9 @@
 import random
 
 class IdolsContainer():
+"""
+IdolsAttributeを格納するためのコンテナ。
+"""
 	def __init__(self):
 		self.container = []
 		
@@ -38,6 +41,9 @@ class IdolsContainer():
 		
 
 class IdolsAttribute():
+"""
+各アイドルの属性。
+"""
 	
 	def __init__(self):
 		self.name = u"Tsukasa Ayatsuji" 
@@ -65,7 +71,7 @@ class IdolsAttribute():
 		self.pa = float(Pa)
 		self.pictureName = Pi
 	def getName(self):
-		return self.name	
+		return self.name
 	def getB(self):
 		return self.B
 	def getW(self):
