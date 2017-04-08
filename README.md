@@ -41,14 +41,14 @@ main.pywをダブルクリックするとGUI画面が開く。
 - Python 2.7
 - 以下のモジュール(pipでインストール可能、あるいはすでに配置済み)
 
-+ random
-+ time
-+ sys
-+ Dialog
-+ Tkinter
-+ TkMessageBox
-+ PIL
-+ numpy
+  - random
+  - time
+  - sys
+  - Dialog
+  - Tkinter
+  - TkMessageBox
+  - PIL
+  - numpy
 
 
 ## リリースノート
