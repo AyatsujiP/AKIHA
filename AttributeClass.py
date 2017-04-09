@@ -4,7 +4,7 @@
 #Copyright (c) 2017 AyatsujiP All Rights Reserved.
 
 
-
+import logging
 import random
 
 class IdolsContainer():

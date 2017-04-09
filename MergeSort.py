@@ -4,6 +4,7 @@
 #Module for Merge Sorting and others.
 ##Copyright (c) 2017 AyatsujiP All Rights Reserved.
 
+import logging
 import AttributeClass as ac 
 
 def printChoice(leftItem,rightItem):

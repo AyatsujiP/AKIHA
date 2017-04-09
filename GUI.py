@@ -4,7 +4,7 @@
 #GUI definition
 #Copyright (c) 2017 AyatsujiP All Rights Reserved.
 
-
+import logging
 import MergeSort
 import AttributeClass as ac
 import Regression
