@@ -222,8 +222,9 @@ class MyTk(Tkinter.Tk):
 		Tkinter.Tk.__init__(self,master)
 		self.geometry("960x640")
 		self.title("AKIHA Ver %s" % self.ver)
-		
-		
+
+
+
 def resizeImage(tup,maxSize=400):
 	"""
 	画像のサイズを、画面に表示できるように変更する
