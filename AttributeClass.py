@@ -8,9 +8,9 @@
 import random
 
 class IdolsContainer():
-"""
-IdolsAttributeを格納するためのコンテナ。
-"""
+	"""
+	IdolsAttributeを格納するためのコンテナ。
+	"""
 	def __init__(self):
 		self.container = []
 		
@@ -41,9 +41,9 @@ IdolsAttributeを格納するためのコンテナ。
 		
 
 class IdolsAttribute():
-"""
-各アイドルの属性。
-"""
+	"""
+	各アイドルの属性。
+	"""
 	
 	def __init__(self):
 		self.name = u"Tsukasa Ayatsuji" 

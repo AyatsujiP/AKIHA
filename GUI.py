@@ -46,9 +46,9 @@ class MyApp(Tkinter.Frame):
 		
 	
 	def imageConfig(self):
-	"""
-	画像ファイルの表示のための関数。
-	"""
+		"""
+		画像ファイルの表示のための関数。
+		"""
 		try:
 			self.leftImage = Image.open(self.picDir + "/" + self.tmpCont.returnIdolByName(self.nextText[0]).getPictureName())
 			self.leftImage = self.leftImage.resize(resizeImage(self.leftImage.size),Image.NEAREST)
@@ -65,10 +65,10 @@ class MyApp(Tkinter.Frame):
 		self.rightText.configure(text=self.nextText[1])
 		
 	def setNameArray(self,inArray):
-	"""
-	マージソートを行う際の次の名前を出すための関数。
-	"""
-	self.array = inArray
+		"""
+		マージソートを行う際の次の名前を出すための関数。
+		"""
+		self.array = inArray
 		self.nextText = MergeSort.mergeWithoutRecWithAns(self.nameArray,self.ansArray)
 		if len(self.nextText) == 2:
 			self.imageConfig()
@@ -77,9 +77,9 @@ class MyApp(Tkinter.Frame):
 		self.ansDialog = tkMessageBox.askokcancel(u'結果発表',self.ansText)
 
 	def nextCommand(self):
-	"""
-	GUIの状態を変えるための関数。
-	"""
+		"""
+		GUIの状態を変えるための関数。
+		"""
 		self.ansArray.append(self.ans.get())
 		self.nextText = MergeSort.mergeWithoutRecWithAns(self.array,self.ansArray)
 		if len(self.nextText) == 2:
@@ -103,18 +103,18 @@ class MyApp(Tkinter.Frame):
 				self.sugWindow.mainloop()
 				
 	def showHelp(self):
-	"""
-	ヘルプボタンを押したときの挙動。
-	"""
+		"""
+		ヘルプボタンを押したときの挙動。
+		"""
 		tkMessageBox.showinfo(u"使い方", 
 							u"左か右の画像で気に行った方を下のラジオボタンから選択して、「次へ」を押してください。\n" + 
 							u"画像すべてに対しての順位付けと、好みの由来が明らかになります。\n")
 			
 		
 	def makeWidget(self):
-	"""
-	Tkinterのウィジェットをインスタンス変数として作成。
-	"""
+		"""
+		Tkinterのウィジェットをインスタンス変数として作成。
+		"""
 		self.screenTitle = Tkinter.Label(self,text = "AKIHA Ver %s" % self.ver,font = (self.myFont,30))
 		self.leftImage = None
 		self.rightImage = None
@@ -134,9 +134,9 @@ class MyApp(Tkinter.Frame):
 		self.additionalInformation = Tkinter.Label(self,text = self.addText,font=(self.myFont,11))
 	
 	def alignWidget(self):
-	"""
-	ウィジェットの位置調整。
-	"""
+		"""
+		ウィジェットの位置調整。
+		"""
 		self.screenTitle.grid(row=0,column=0,columnspan=2)
 		self.leftPic.grid(row=1,column=0)
 		self.rightPic.grid(row=1,column=1)
