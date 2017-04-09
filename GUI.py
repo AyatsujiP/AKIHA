@@ -4,6 +4,7 @@
 #GUI definition
 #Copyright (c) 2017 AyatsujiP All Rights Reserved.
 
+import settings
 import logging
 import MergeSort
 import AttributeClass as ac
@@ -21,9 +22,9 @@ class MyApp(Tkinter.Frame):
 	"""
 	def __init__(self,master=None,filename="MobaMas.txt",sugfile = "Suggest.txt"):
 		self.ver = master.ver
-		self.myFont = "Gputeks"
+		self.myFont = settings.FONT
 		Tkinter.Frame.__init__(self,master)
-		self.picDir = "Pictures"
+		self.picDir = settings.PICTURE_DIR
 		self.ans = Tkinter.BooleanVar()
 		self.ans.set(True)
 		self.ansDialog = False
@@ -217,7 +218,7 @@ class MyTk(Tkinter.Tk):
 	GUIのクラスを継承する
 	"""
 	def __init__(self,master=None):
-		self.ver = u"0.7.1"
+		self.ver = settings.VERSION
 		Tkinter.Tk.__init__(self,master)
 		self.geometry("960x640")
 		self.title("AKIHA Ver %s" % self.ver)

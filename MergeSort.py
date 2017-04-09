@@ -26,7 +26,6 @@ def readTable(FILENAME):
 	for l in f:
 		try:
 			trg = l.rstrip("\n").split(",")
-			#print trg
 			tmp = ac.IdolsAttribute()
 			tmp.setAll(trg[0].decode("utf-8"),trg[1],trg[2],trg[3],trg[4],trg[5],trg[6],trg[7],trg[8],trg[9],trg[10])
 			cont.appendIdol(tmp)
