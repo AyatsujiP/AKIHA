@@ -1,7 +1,7 @@
-#name,B,W,H,age,height,weight,Cute,Cool,Passion,Pictures
+﻿#name,B,W,H,age,height,weight,Cute,Cool,Passion,Pictures
 東條希,90,60,82,17,159,51,1,0,0,Nozomi.jpg
 園田海未,76,58,80,16,159,47,0,1,0,Umi.jpg
 絢瀬絵里,88,60,84,17,162,52,0,1,0,Eri.jpg
 矢澤にこ,74,57,79,17,154,45,0,0,1,Niko.png
 南ことり,80,58,80,16,159,48,1,0,0,Kotori.jpg
-高坂穂乃香,78,58,82,16,157,47,0,0,1,Honoka.jpg
+高坂穂乃果,78,58,82,16,157,47,0,0,1,Honoka.jpg
