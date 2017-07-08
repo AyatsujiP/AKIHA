@@ -28,9 +28,9 @@ Web‚É±‘§‚·‚éƒ‰ƒ“ƒv‚Ì–‚l‚È‚ñ‚©‚É‚àŠÖŒW‚ª‚ ‚é‚©‚à‚µ‚ê‚È‚¢BŠÖŒW‚ª‚È‚¢‚©‚à‚µ‚ê‚È‚
  - AKIHA_for_web/”z‰º‚ÉAsecrets.pyƒtƒ@ƒCƒ‹‚ðì¬‚·‚éB
  - ƒtƒ@ƒCƒ‹‚Ì“à—e‚Æ‚µ‚ÄAˆÈ‰º‚ð‹LÚ‚·‚éB
  
-    #-*- coding: utf-8 -*-
-    DB_PASSWORD = '<2-1‚ÅŒˆ‚ß‚½ƒpƒXƒ[ƒh>'
-    SECRET_KEY = '<“K“–‚È•¶Žš—ñB‰½‚Å‚à‚æ‚¢B>'
+    #-*- coding: utf-8 -*-  
+    DB_PASSWORD = '<2-1‚ÅŒˆ‚ß‚½ƒpƒXƒ[ƒh>'  
+    SECRET_KEY = '<“K“–‚È•¶Žš—ñB‰½‚Å‚à‚æ‚¢B>'  
 
 ### 2-4. DB‚ÌÝ’è
  - postgresql‚ÉAƒ†[ƒU–¼akihaADB–¼akiha\_for\_web‚Æ‚µ‚ÄDB‚ðì‚Á‚Ä‚¨‚­B•¶ŽšƒR[ƒh‚ÍUTF-8‚É‚µ‚Ä‚¨‚­‚±‚ÆB
