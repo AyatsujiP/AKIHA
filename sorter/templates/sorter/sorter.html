@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AKIHA for Web</title>
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'sorter/sorter.css' %}" />
+	</head>
+
+	<body>
+		<div class="base_flexbox">
+			<div class="navbar">
+				<div class="navdiv">
+					<p class="AKIHA_title"><a href="/" class="navbar_href">AKIHA for web</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/sorter/" class="navbar_href">Sorter</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/sorter/result/" class="navbar_href">Result</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/sorter/sorted_idols/" class="navbar_href">Sort Complete</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/admin/" class="navbar_href">admin</a></p>
+				</div>
+			</div>
+			<div class="main_flexbox">
+				<div class="main">
+				<h2 class="title_h2">AKIHA for Web, Version 2.1.1</h2>
+				</div>
+			</div>
+			<form action="/sorter/" method="POST">{% csrf_token %}
+			<div class="picture_div">
+				<div class="idol_picture">
+					<div class="button_div">
+						<button class="idol_select" name="idol_select" value="left">
+							<div class="pict">
+								<img src="/static/Pictures/{{left_picture}}" alt={{left_name}}>
+							</div>
+						</button>
+						</div>
+					<p class="idol_name">{{left_name}}</p>
+				</div>
+				
+				<div class="idol_picture">
+					<div class="button_div">
+						<button class="idol_select" name="idol_select" value="right">
+							<div class="pict">
+								<img src="/static/Pictures/{{right_picture}}" alt={{right_name}}>
+							</div>
+						</button>
+					</div>
+					<p class="idol_name">{{right_name}}</p>
+				</div>
+			</div>
+			<div class="acknowledgement_and_buttons">
+				<div class="acknowledgement">
+					<p>A Knowledge-based Items' Hierarchical Algorithm (AKIHA) Ver 2.1.1<br>
+					Created by AyatsujiP, 2017-06-05</p>
+				</div>
+			</div>
+			</form>
+		</div>
+	</body>
+	
+</html>
+

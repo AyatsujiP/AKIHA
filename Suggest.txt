@@ -1,4 +1,0 @@
-﻿#name,B,W,H,age,height,weight,Cute,Cool,Passion,Pictures
-春日未来,78,54,77,14,156,42,1,0,0,Mirai.jpg
-最上静香,76,53,77,14,162,44,0,1,0,Mogami.jpg
-伊吹翼,85,52,82,14,158,43,0,0,1,Tsubasa.jpg

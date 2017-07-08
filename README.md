@@ -1,65 +1,58 @@
-﻿# A Knowledge-based Items' Hierarchical Algorithm (AKIHA) Ver0.8.0 説明書
+# A Knowledge-based Items' Hierarchical Algorithm (AKIHA) Ver2�D1.1 ������
 
-## 1． 概要
-本プログラムは、好きなアイドルを2択で選んでいくと、自分自身の好きなアイドルの順位およびおすすめアイドルを表示してくれるプログラムである。
-専門的なことを言うとソーティング結果に基づく重回帰と予測を実行するプログラムである。
+## 1�D �T�v
+�{�v���O�����́A�D���ȃA�C�h����2���őI��ł����ƁA�������g�̍D���ȃA�C�h���̏��ʂ���т������߃A�C�h����\�����Ă����v���O�����ł���B
+���I�Ȃ��Ƃ������ƃ\�[�e�B���O���ʂɊ�Â��d��A�Ɨ\�������s����v���O�����ł���B
 
-名前の由来は上記略語(知識ベースによるアイテム階層化アルゴリズム)だが、14歳の天才ロボ少女とか、人の目を見ただけで心が読めるネコミミメイドとか、
-Webに棲息するランプの魔人なんかにも関係があるかもしれない。関係がないかもしれない。
+���O�̗R���͏�L����(�m���x�[�X�ɂ��A�C�e���K�w���A���S���Y��)�����A14�΂̓V�˃��{�����Ƃ��A�l�̖ڂ����������ŐS���ǂ߂�l�R�~�~���C�h�Ƃ��A
+Web�ɐ������郉���v�̖��l�Ȃ񂩂ɂ��֌W�����邩������Ȃ��B�֌W���Ȃ���������Ȃ��B
 
-サンプルとして用意しているのはIdolm@ster シンデレラガールズに登場するアイドルであるが、実際にはスリーサイズ、年齢、身長、体重、性格(CuteかCoolかPassionかの3択)がわかれば
-2次元だろうが3次元だろうが9次元データに落としこめるので、本プログラムでソート・サジェスト可能である。
-
-## 2. 機能
-本プログラムは2つの機能を有する。
-### a) MobaMas.txtに載っているアイドルのソート機能
-ソーティングアルゴリズムの大小比較部分をユーザーに選択させることで、アイドルをソートし、結果を表示する。
-### b) Suggest.txtに載っているアイドルのサジェスト機能
-ソーティングアルゴリズムの結果から、最も好きな確率が高そうなアイドルをSuggest.txtから1人選択し、表示する。
-
-## 3. 必要ファイルなど
-### a) Suggest.txt, Mobamas.txt
-サンプルにあるように、1行目には#で始まる行がある。この行は消さないこと。
-2行目からはアイドルの属性を入れていく。
-「名前、バスト、ウェスト、ヒップ、年齢、身長、体重、Cute、Cool、Passion、画像ファイル名」をカンマ区切りで入れていくこと。
-Cute、Cool、Passionは当てはまる属性を1にして、その他を0にする。
-画像ファイル名は、Picturesフォルダに入れたそのアイドルの画像ファイルと同じファイル名を入れること。
-### b) Picturesフォルダ以下の画像ファイル
-適当な名前(英数字のみを推奨)を付けた各アイドルの画像ファイルを、Picturesフォルダ配下に入れる。
-画像は320x400のgifファイルが推奨であるがそれ以外でも一応動作する。
-Picturesフォルダ以下の画像がなくても動作する。
-
-## 4. 使用方法
-- 4.1. main.pywをダブルクリックするとGUI画面が開く。
-- 4.2. 2択のうち自分が好きなほうを「左」または「右」のラジオボタンで選択し、「次へ」を押す。
-- 4.3. 4.2.を適当な回数(マージソートの比較回数なので、n人のアイドルがいる場合は平均O(nlogn)回クリック)繰り返すと、ソートされた結果が表示される。
-- 4.4. その後、Suggest.txtに載っているアイドルのうち、最も好きな確率が高そうなアイドルがサジェストされる。
+�T���v���Ƃ��ėp�ӂ��Ă���̂�Idolm@ster �V���f�����K�[���Y�ɓo�ꂷ��A�C�h���ł��邪�A���ۂɂ̓X���[�T�C�Y�A�N��A�g���A�̏d�A���i(Cute��Cool��Passion����3��)���킩���
+2�������낤��3�������낤��9�����f�[�^�ɗ��Ƃ����߂�̂ŁA�{�v���O�����Ń\�[�g�E�T�W�F�X�g�\�ł���B
 
 
-## 5. その他
-私は神谷奈緒Pです。
+## 2. �T�[�o�̃Z�b�g�A�b�v
 
-## 6. 動作環境
+### 2-1. DB(Postgresql)
+ - Postgresql(9.6����)���_�E�����[�h���Ă����Bapt-get�œ�����̂ł悢�B
+ - ���[�U�[�Ƃ��āAakiha������Ă����B�p�X���[�h���K���Ɍ��߂�B
+ 
+### 2-2. Django, numpy, PIL(Python�p�b�P�[�W)
+ - Django 1.11���_�E�����[�h���Ă����B
+ - numpy��PIL�ɂ��Ă��_�E�����[�h���Ă����B
+ - pip3 install django numpy pillow�ŃC���X�g�[���\�B
 
-- Windows 7を推奨(Windows 10でも動くことは確認済)
-  - RAMはそんなに使わないはず。
-- Python 2.7
-  - 手元の環境ではPython 2.7.13で動作。
-- 以下のモジュール(pipでインストール可能。おそらく、標準モジュール以外に追加したのはPIL(pillow)とnumpyだけのはずです)
+### 2-3. �\�[�X�R�[�h�̃f�v���C
+ - Git�����擾����B�ȉ��A/var/www/AKIHA�ȉ��Ƀ_�E�����[�h�������Ƃ�O��ɋL�ڂ���B
+ - �ʂ̏ꏊ�Ƀf�v���C�����ꍇ�͓K�X�ǂݑւ��邱�ƁB
+ - AKIHA_for_web/�z���ɁAsecrets.py�t�@�C�����쐬����B
+ - �t�@�C���̓��e�Ƃ��āA�ȉ����L�ڂ���B
+ 
+    #-*- coding: utf-8 -*-
+    DB_PASSWORD = '<2-1�Ō��߂��p�X���[�h>'
+    SECRET_KEY = '<�K���ȕ�����B���ł��悢�B>'
 
-  - random
-  - time
-  - sys
-  - Dialog
-  - Tkinter
-  - TkMessageBox
-  - PIL
-  - numpy
-
-------------------------------
-## リリースノート
-
-* 2016.8.12 Ver 0.7.0 バグフィックス実施、リリース版
-* 2017.3.5 Windows10でも動作することを確認
-* 2017.4.9 Ver 0.7.1 リリース(ソース管理をGithubに移行)
-* 2017.7.8 Ver 0.8.0 リリース(ミリシタのリリースを記念して、ミリシタの初期アイドル3人のうちから1人がサジェストされるように修正)
+### 2-4. DB�̐ݒ�
+ - postgresql�ɁA���[�U��akiha�ADB��akiha\_for\_web�Ƃ���DB������Ă����B�����R�[�h��UTF-8�ɂ��Ă������ƁB
+ 
+### 2-5. �}�C�O���[�V����
+ - /var/www/AKIHA�ŁApython3 manage.py migrate��DB�Ƀe�[�u�����쐬�B
+ - /var/www/AKIHA�ŁApython3 sorter/insert\_initial\_idols.py�����s���ď����f�[�^�𓊓��B
+ 
+### 2-6. �������[������
+ - python3 manage.py createsuperuser�ŃX�[�p�[���[�U�쐬�BDjango�̊Ǘ����[�U���쐬�����B
+ 
+# 3. ���s
+ - 2�͂�2-1����2-6�܂ł����s������A/var/www/AKIHA��python3 manage.py runserver������΁A127.0.0.1:8000�ŗ����オ��B
+ - Apache��œ����������Ƃ����v�����Ȃ���΁A����ł悢�B
+ - Apache�Ńz�X�e�B���O�������ꍇ�́A�����g�Œ��ׂĂ��������Bmod-wsgi���g�����ƂɂȂ�܂��B
+ 
+# 4. ���l
+ - ���͐_�J�ޏ�P�ł��B
+ 
+# 5. �����[�X�m�[�g
+* 2016.8.12 Ver 0.7.0 �o�O�t�B�b�N�X���{�A�����[�X��
+* 2017.3.5 Windows10�ł����삷�邱�Ƃ��m�F
+* 2017.4.9 Ver 0.7.1 �����[�X(�\�[�X�Ǘ���Github�Ɉڍs)
+* 2017.7.8 Ver 0.8.0 �����[�X(�~���V�^�̃����[�X���L�O���āA�~���V�^�̏����A�C�h��3�l�̂�������1�l���T�W�F�X�g�����悤�ɏC��)
+* 2017.7.8 Ver 2.1.1 �����[�X()
