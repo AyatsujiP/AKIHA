@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AKIHA for Web</title>
+		{%load static%}
+		<link rel="stylesheet" type="text/css" href="{% static 'sorter/result.css' %}" />
+	</head>
+	
+	<body>
+		<div class="base_flexbox">
+			<div class="navbar">
+				<div class="navdiv">
+					<p class="AKIHA_title"><a href="/" class="navbar_href">AKIHA for web</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/sorter/" class="navbar_href">Sorter</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/sorter/result/" class="navbar_href">Result</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/sorter/sorted_idols/" class="navbar_href">Sort Complete</a></p>
+				</div>
+				<div class="navdiv">
+					<p class="navchar"><a href="/admin/" class="navbar_href">admin</a></p>
+				</div>
+		</div>
+			<div class="main_flexbox">
+				<div class="main">
+					<h2 class="title_h2">Oops!</h2>
+				</div>
+			</div>
+			<p>マージソートは未完了です。/sorter/ページから、マージソートを完了させるようにしてください。</p>
+			<p><a href="/sorter">Go to sorter page</a></p>
+		</div>
+	</body>
+</html>

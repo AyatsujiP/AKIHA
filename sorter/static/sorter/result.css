@@ -1,0 +1,71 @@
+			body{
+				background-color:white;
+				padding:0;
+				font: 100% "Gputeks"
+			}
+			.navbar{
+				height: 40pt;
+				background-color: black;
+				display: flex;
+				flex-direction: row;
+	    		justify-content: center;/* 3 */
+	    		align-items: center;  
+			}
+			.navdiv{
+				padding: 0;
+				width: 30%;
+			}
+			.navchar{
+				color: white;
+				font: 18pt "Yu Gothic"; 
+				margin: 0;
+				padding: 0;
+			}
+			.navbar_href{
+				text-decoration: none;
+				color: white;
+			}
+			.AKIHA_title{
+				font: 18pt "Gputeks";
+				color: white;
+				margin: 0;
+				padding: 0;
+			}
+			h2.title_h2{
+				text-align:center;
+				font: 32pt "Verdana";
+			}
+			.like_flexbox{
+				display: flex;
+				flex-direction: row;
+			}
+			.like_picture img{
+				width: 50%;
+				height: auto;
+			}
+			.like_picture{
+				width: 50%;
+				text-align: center;
+
+			}
+			.picture_name{
+				font: 14pt "Yu Gothic";
+			}
+			.coefficients{
+				display: flex;
+				flex-direction: column;
+			}
+			.coefficients p{
+				margin:0;
+				padding:0;
+				font-size: 18pt;
+			}
+			.coef_href{
+				margin: 50px;
+			}
+			.coef_title{
+				font-size: 24pt;
+			}
+			.main{
+				
+			}

@@ -1,0 +1,67 @@
+body{
+			background-color:white;
+			padding:0;
+			font: 100% "Yu Gothic";
+}
+		h2.title_h2{
+			text-align:center;
+			font: 32pt "Gputeks";
+		}
+		.base_flexbox{
+			display: flex;
+			flex-direction: column;
+		}
+		.main_flexbox{
+			display: flex;
+			flex-direction: row;
+		}
+		.menubar{
+			display: flex;
+			flex-direction: column;
+			height: 300pt;
+			width: 200pt;
+			background-color: pink;
+			padding: 0;
+		}
+		.navbar{
+			height: 40pt;
+			background-color: black;
+			display: flex;
+			flex-direction: row;
+    		justify-content: center;/* 3 */
+    		align-items: center;  
+		}
+		.navdiv{
+			padding: 0;
+			width: 30%;
+		}
+		.navchar{
+			color: white;
+			font: 18pt "Yu Gothic"; 
+			margin: 0;
+			padding: 0;
+		}
+		.navbar_href{
+			text-decoration: none;
+			color: white;
+		}
+		.navbar_href:visited{
+			color: white;
+		}
+		.main{
+			flex: 1;
+		}
+		.AKIHA_title{
+			font: 18pt "Gputeks";
+			color: white;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+		.acknowledgement{
+			width: 50%;
+			border: 1px;
+		}
+		.explain p{
+			font: 14pt "Yu Gothic"
+		}
