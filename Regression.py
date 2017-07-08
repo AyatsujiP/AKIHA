@@ -4,6 +4,7 @@
 #Module for Regression Analysis.
 #Copyright (c) 2017 AyatsujiP All Rights Reserved.
 
+import logging
 import numpy as np
 import AttributeClass
 
@@ -78,6 +79,7 @@ class RegressionClass():
 							[np.mean(self.coArray),np.std(self.coArray)],
 							[np.mean(self.paArray),np.std(self.paArray)]]
 							)
+
 	
 	def register(self,preferredArray):
 		"""

@@ -4,7 +4,7 @@
 #Copyright (c) 2017 AyatsujiP All Rights Reserved.
 
 
-
+import logging
 import random
 
 class IdolsContainer():
@@ -89,7 +89,7 @@ class IdolsAttribute():
 	def getCo(self):
 		return self.co
 	def getPa(self):
-		return self.pa		
+		return self.pa
 	def getPictureName(self):
 		return self.pictureName
 	def returnAll(self):
