@@ -1,3 +1,5 @@
 /Pictures/*
+!/Pictures/.gitkeep
 /logs/*
+!/logs/.gitkeep
 /*.pyc

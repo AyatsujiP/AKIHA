@@ -6,7 +6,7 @@
 
 import logging
 
-VERSION = u"0.7.1"
+VERSION = u"0.8.0"
 
 LOG_FILE_NAME="logs/AKIHA.log"
 

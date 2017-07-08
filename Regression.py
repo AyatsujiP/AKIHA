@@ -79,6 +79,7 @@ class RegressionClass():
 							[np.mean(self.coArray),np.std(self.coArray)],
 							[np.mean(self.paArray),np.std(self.paArray)]]
 							)
+
 	
 	def register(self,preferredArray):
 		"""
