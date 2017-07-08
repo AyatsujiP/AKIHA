@@ -1,4 +1,4 @@
-# A Knowledge-based Items' Hierarchical Algorithm (AKIHA) Ver2．1.1 説明書
+# A Knowledge-based Items' Hierarchical Algorithm (AKIHA) Ver2.1.1 説明書
 
 ## 1． 概要
 本プログラムは、好きなアイドルを2択で選んでいくと、自分自身の好きなアイドルの順位およびおすすめアイドルを表示してくれるプログラムである。
