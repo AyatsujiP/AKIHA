@@ -1,8 +1,6 @@
-#! C:/python27
+#! C:/Python35
 # -*- encoding: utf-8 -*-
 #Module for Class Definition.
-#Copyright (c) 2017 AyatsujiP All Rights Reserved.
-
 
 import logging
 import random
@@ -13,26 +11,43 @@ class IdolsContainer():
 	"""
 	def __init__(self):
 		self.container = []
-		
+	
+	
 	def appendIdol(self,idol):
+		"""
+		コンテナにアイドルを追加するラッパー。
+		"""
 		self.container.append(idol)
 	
 	def returnIdolByName(self,findName):
+		"""
+		アイドル名を用いて、アイドルの属性を返却する関数。
+		"""
 		for i in self.container:
 			if i.name == findName:
 				return i
 		return "No %s Found." % findName
 		
 	def returnContainer(self):
+		"""
+		コンテナそのものを返却する。
+		"""
 		return self.container
 		
 	def returnNameArray(self):
+		"""
+		名前の一覧を返却する。
+		"""
 		ans = []
 		for item in self.container:
 			ans.append(item.getName())
 		return ans
+
 	def shuffle(self):
-		ary = range(0,len(self.container))
+		"""
+		順番をシャッフルする。
+		"""
+		ary = [i for i in range(0,len(self.container))]
 		random.shuffle(ary)
 		for i in range(0,len(self.container)):
 			tmp = self.container[i]

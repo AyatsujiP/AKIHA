@@ -1,0 +1,113 @@
+		body{
+			background-color:white;
+			padding:0;
+			font: 100% "Yu Gothic";
+		}
+	
+		h2.title_h2{
+			text-align:center;
+			font: 32pt "Gputeks";
+		}
+		
+		.base_flexbox{
+			display: flex;
+			flex-direction: column;
+		}
+		.main_flexbox{
+			display: flex;
+			flex-direction: row;
+		}
+		.menubar{
+			display: flex;
+			flex-direction: column;
+			height: 300pt;
+			width: 200pt;
+			background-color: pink;
+			padding: 0;
+		}
+		.navbar{
+			height: 40pt;
+			background-color: black;
+			display: flex;
+			flex-direction: row;
+    		justify-content: center;/* 3 */
+    		align-items: center;  
+		}
+		.navdiv{
+			padding: 0;
+			width: 30%;
+		}
+		.navchar{
+			color: white;
+			font: 18pt "Yu Gothic"; 
+			margin: 0;
+			padding: 0;
+		}
+		.navbar_href{
+			text-decoration: none;
+			color: white;
+		}
+		.navbar_href:visited{
+			color: white;
+		}
+		.main{
+			flex: 1;
+		}
+		.picture_div{
+			display: flex;
+			flex-direction: row;
+			font: 14pt "Yu Gothic";
+			margin: 10px;
+		}
+		.idol_name{
+			margin-bottom: 0;
+		}
+		.idol_picture{
+			width: 50%;
+			height: auto;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+		}
+		.AKIHA_title{
+			font: 18pt "Gputeks";
+			color: white;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+
+		.acknowledgement{
+			width: 50%;
+			border: 1px;
+		}
+		.acknowledgement_and_buttons{
+			display: flex;
+			flex-direction: row;
+		}
+		.radio_select{
+			text-align: center;
+		}
+
+		.idol_select{
+			width: 90%;
+			height: auto;
+			margin:0;
+			padding:0;
+			background-color:white;
+			text-align:center;
+		}
+		.pict{
+			text-align: center;
+		}
+		button{
+			border: none;
+		}
+		button:hover{
+			background-color: #eff;
+			border: none;
+			transition: .3s;
+		}
+		.button_div{
+			text-align: center;
+		}
